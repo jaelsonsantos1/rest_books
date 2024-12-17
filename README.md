@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+Rest Books
+
+This is an application to test usage between databases like POstgresDB and MongoDB.
+
 
 ## Getting Started
 

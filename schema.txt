@@ -1,0 +1,12 @@
+ROTAS
+
+- User
+Criar Usuário
+Listar usuários
+Listar usuário por ID
+Desativar Usuário
+Reativar usuário
+
+- Book
+Criar livro
+Listar livros

@@ -1,0 +1,42 @@
+### Criar usuário
+POST http://localhost:3000/api/users/
+Content-Type: application/json
+
+{
+    "name": "Mario Silva",
+    "email": "mario.silva123@gmail.com",
+    "password" : "123456"
+}
+
+### Listar usuários
+GET http://localhost:3000/api/users/
+
+
+### Buscar usuário por id
+GET http://localhost:3000/api/users/947b9834-e58c-457e-9c0f-aa9a2f30f046
+
+### Desativar usuário
+PUT http://localhost:3000/api/users/947b9834-e58c-457e-9c0f-aa9a2f30f046
+
+### Ativar usuário
+PUT http://localhost:3000/api/users/947b9834-e58c-457e-9c0f-aa9a2f30f046/active
+
+### Criar gêneros
+POST http://localhost:3000/api/genres/
+
+{
+    "name": "Fantasia"
+}
+
+### Listar gêneros
+GET http://localhost:3000/api/genres/
+
+### Criar livro
+POST http://localhost:3000/api/books/
+
+{
+    "title": "O Senhor dos Anéis",
+    "author": "J. R. R. Tolkien",
+    "description": "O Senhor dos Anéis é um dos clássicos da literatura fantástica.",
+    "publicationDate": "1954-07-29"
+}
