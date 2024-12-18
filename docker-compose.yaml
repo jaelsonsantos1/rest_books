@@ -6,3 +6,24 @@ services:
     environment:
       POSTGRES_DB: libraryDB
       POSTGRES_HOST_AUTH_METHOD: trust
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+      MONGO_INITDB_DATABASE: libraryDB
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  mongodb_data:
