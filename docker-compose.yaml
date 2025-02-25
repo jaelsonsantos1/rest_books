@@ -1,8 +1,26 @@
+version: '3.8'
+
 services:
-  postgres:
-    image: postgres:15-alpine
+  app:
+    build: .
     ports:
-      - 5432:5432
+      - "3000:3000"
+    depends_on:
+      - db
     environment:
-      POSTGRES_DB: libraryDB
-      POSTGRES_HOST_AUTH_METHOD: trust
+      - DATABASE_URL=postgres://user:password@db:5432/mydatabase
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
